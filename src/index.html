@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  @@include('html/head.html',{ "title":"pauchoo0k" })
+  <body class="body">
+    @@include('html/components/header.html')
+    <main>
+      <div
+        class="sect-box"
+        style="
+          background: url(&quot;@img/bg.jpg&quot;) center / cover no-repeat;
+        "
+      >
+        @@include('html/components/s-hero.html')
+        @@include('html/components/sect-nav.html')
+      </div>
+    </main>
+    @@include('html/components/footer.html')
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

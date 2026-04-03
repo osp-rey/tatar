@@ -1,0 +1,27 @@
+@use '../base/templates' as *;
+@use '../base/media' as *;
+
+.lang-toggle {
+  display: flex;
+  gap: 15px;
+  font-family: "DINPro", sans-serif;
+}
+.lang-toggle-btn {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: -0.09em;
+  text-transform: uppercase;
+
+  transition: color .3s ease;
+
+  @include hover {
+    color: var(--primary);
+  }
+
+  &._active {
+    pointer-events: none;
+    color: var(--primary);
+  }
+}

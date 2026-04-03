@@ -1,0 +1,10 @@
+.body-hidden {
+  overflow: hidden;
+  touch-action: none;
+}
+.body {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  background-color: var(--dark-blue);
+  font-size: 16px;
+}

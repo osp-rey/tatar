@@ -1,0 +1,11 @@
+.s-hero {
+  &__img {
+    position: absolute;
+    display: block;
+    pointer-events: none;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+}

@@ -1,0 +1,76 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.a-player {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-family: "DINPro", sans-serif;
+  font-weight: 700;
+
+  &._playing {
+    .a-player-btn {
+      background-image: url("@img/pause-icon.svg");
+    }
+  }
+}
+.a-player-btn {
+  @include flex-center;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  border-radius: 50%;
+  background: url("@img/play-icon.svg") center / 18px auto no-repeat;
+  background-color: rgba(255, 255, 255, 0.3);
+
+  transition: background-color 0.3s ease;
+  @include hover {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+}
+.a-player-body {
+  width: 200px;
+}
+.a-player-name {
+  margin-bottom: 10px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.a-player-progressbar {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: white;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: var(--progress);
+    background-color: var(--yellow);
+    z-index: 1;
+  }
+}
+.a-player-progressbar-range {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.a-player-time {
+  @include flex-between;
+  gap: 10px;
+  margin-top: 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+}
+.a-player-time-current {
+}
+.a-plyer-time-full {
+}

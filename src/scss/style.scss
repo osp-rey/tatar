@@ -1,0 +1,24 @@
+@use "./base/fonts";
+@use "./base/normalize";
+@use "./base/vars";
+@use "./base/templates";
+@use "./base/settings";
+@use "./base/media";
+@use "./base/body-config";
+@use "./base/config-container";
+
+// ui
+@use "./ui/button";
+@use "./ui/list";
+@use "./ui/lang-toggle";
+@use "./ui/a-player";
+@use "./ui/tab";
+
+// components
+@use "./components/header";
+@use "./components/burger";
+
+@use "./components/sect-box";
+@use "./components/s-hero";
+
+@use "./components/footer";
