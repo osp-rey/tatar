@@ -13,6 +13,8 @@
 @use "./ui/lang-toggle";
 @use "./ui/a-player";
 @use "./ui/tab";
+@use "./ui/card-team";
+@use "./ui/slider";
 
 // components
 @use "./components/header";
@@ -20,5 +22,7 @@
 
 @use "./components/sect-box";
 @use "./components/s-hero";
+@use "./components/s-team";
+@use "./components/s-about";
 
 @use "./components/footer";

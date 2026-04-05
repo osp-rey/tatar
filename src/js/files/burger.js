@@ -18,7 +18,6 @@ export default function burger() {
     btnClose.addEventListener("click", handleClose);
 
     function handleOpen() {
-      console.log(burger);
       document.body.classList.add("body-hidden");
       burger.classList.add("_open");
       burgerOverlay.classList.add("_active");

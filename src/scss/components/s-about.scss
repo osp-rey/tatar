@@ -1,0 +1,59 @@
+@use '../base/templates' as *;
+@use '../base/media' as *;
+
+.s-about {
+  display: flex;
+  &__wrapper {
+    max-width: 755px;
+    margin: 0 auto;
+    padding-top: 100px;
+    @include laptop {
+      padding-top: 80px;
+    }
+    @include laptop-min {
+      padding-top: 0;
+    }
+  }
+  &__title {
+    font-family: "DINPro", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    text-transform: uppercase;
+    margin: 0px 0px 40px 0px;
+    @include laptop-min {
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+  }
+  &__content {
+    line-height: 120%;
+    text-transform: uppercase;
+
+    & > * {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__decor {
+    position: absolute;
+    display: block;
+    pointer-events: none;
+    right: 23%;
+    width: 210px;
+    bottom: 0;
+    z-index: -1;
+    @include desktop-big {
+      right: 215px;
+    }
+    @include laptop {
+      right: 130px;
+      width: 180px;
+    }
+    @include tablet {
+      right: 50px;
+      width: 150px;
+    }
+  }
+}

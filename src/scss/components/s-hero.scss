@@ -1,11 +1,55 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
 .s-hero {
+  @include laptop-min {
+    padding-top: 110px;
+    min-height: 100svh;
+    margin: 0;
+
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(16, 31, 64, 0) 60%,
+        #101f40 100%
+      );
+      z-index: -1;
+    }
+    & + .sect {
+      margin-top: 0 !important;
+      padding-top: 50px !important;
+      &::before {
+        position: absolute;
+        content: "";
+        inset: 0;
+        background: linear-gradient(
+          0deg,
+          rgba(16, 31, 64, 0) 60%,
+          #101f40 100%
+        );
+        z-index: -1;
+      }
+    }
+  }
+  &__logo {
+    display: block;
+    margin: 0 auto;
+    width: 345px;
+    @include tablet {
+      width: 300px;
+    }
+  }
   &__img {
     position: absolute;
     display: block;
     pointer-events: none;
     left: 50%;
-    bottom: 0;
+    top: 0;
     transform: translateX(-50%);
-    z-index: -1;
+    z-index: -2;
+    max-width: none;
   }
 }

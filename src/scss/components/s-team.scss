@@ -1,0 +1,23 @@
+@use '../base/templates' as *;
+@use '../base/media' as *;
+
+.s-team {
+  &__slider-wrapper {
+    width: 960px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  &__slider {
+    width: 100%;
+    @include tablet {
+      overflow: visible !important;
+    }
+
+    .swiper-slide {
+      box-sizing: border-box;
+      @include tablet {
+        width: 225px !important;
+      }
+    }
+  }
+}
