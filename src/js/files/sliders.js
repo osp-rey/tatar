@@ -11,7 +11,7 @@ export default function sliders() {
         draggable: true,
       },
       autoplay: {
-        delay: 5000
+        delay: 5000,
       },
       breakpoints: {
         992: {
@@ -32,12 +32,16 @@ export default function sliders() {
     const swiper = new Swiper(contactsSlider, {
       speed: 900,
       slidesPerView: "auto",
-      spaceBetween: 30,
+      spaceBetween: 15,
       autoplay: {
-        delay: 4000
-      }
-    })
+        delay: 4000,
+      },
+      breakpoints: {
+        768: {
+          spaceBetween: 20,
+          slidesPerView: "auto",
+        },
+      },
+    });
   }
 }
-
-

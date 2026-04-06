@@ -10,16 +10,18 @@
 
 .sect {
   position: relative;
+  display: flex;
+  align-items: center;
   min-height: 100vh;
   overflow: hidden;
   z-index: 1;
   padding-top: 135px;
   padding-bottom: 50px;
   @include laptop-min {
-    margin: 50px 0px;
+    margin: 70px 0px;
     min-height: auto;
     padding-top: 0;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
   }
 }
 
@@ -33,25 +35,38 @@
   z-index: 30;
 
   transition:
-    opacity 0.3s ease,
-    transform 0.3s linear,
-    visibility 0.3s ease;
+    background-color 0.3s ease,
+    backdrop-filter 0.3s ease;
 
-  &._active {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(0);
-  }
-
-  @include tablet {
-    bottom: 70px;
-    transform: translateX(-30px);
-    opacity: 0;
-    visibility: hidden;
+  @include laptop-min {
+    padding: 15px 0px;
+    bottom: 0;
+    right: auto;
+    width: fit-content;
   }
   @include tablet-min {
-    width: 300px;
     max-width: 100%;
+  }
+  &._active {
+    background-color: rgba(16, 31, 64, 0.5);
+    backdrop-filter: blur(15px);
+    right: 0;
+
+    .sect-nav__body {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+  }
+  &__body {
+    @include tablet {
+      opacity: 0;
+      visibility: hidden;
+      display: none;
+      transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+    }
   }
   &__tabs-nav {
     position: fixed;
@@ -62,7 +77,8 @@
     bottom: 120px;
     z-index: 30;
     @include laptop-min {
-      bottom: 160px;
+      position: static;
+      margin-bottom: 20px;
     }
     @include tablet-min {
       bottom: 210px;
@@ -123,23 +139,18 @@
       border-radius: 30px;
     }
   }
-  &__info-btn {
-  }
-  &__player {
-  }
 }
-
 .sect-nav-toggle {
-  position: fixed;
-  left: 15px;
-  bottom: 15px;
   width: 110px;
   max-width: 100%;
-  z-index: 10;
+  margin-left: 15px;
   transition:
     transform 0.3s linear,
     opacity 0.3s ease,
     visibility 0.3s ease;
+
+  margin-top: 15px;
+
   @media (min-width: 768px) {
     display: none;
   }

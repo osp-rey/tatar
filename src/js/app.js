@@ -2,6 +2,7 @@ import "../scss/style.scss";
 import audioPlayers from "./files/audioPlayers.js";
 import burger from "./files/burger.js";
 import headerScroll from "./files/headerScroll.js";
+import localNav from "./files/localNav.js";
 import sectNav from "./files/sectNav.js";
 import { sectScroll } from "./files/sectScroll.js";
 import sliders from "./files/sliders.js";
@@ -19,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   sectNav();
   teamAudio();
   sortTours();
+  localNav();
 
   Fancybox.bind("[data-fancybox]");
 });

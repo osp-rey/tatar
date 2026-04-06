@@ -2,20 +2,11 @@
 @use "../base/media" as *;
 
 .s-contacts {
-  display: flex;
-  align-items: center;
   font-family: "DINPro", sans-serif;
   font-weight: 700;
   margin-bottom: 0 !important;
   @include laptop-min {
     padding-top: 50px;
-  }
-  &::before {
-    position: absolute;
-    content: "";
-    inset: 0;
-    background: rgba(16, 31, 64, 0.9);
-    z-index: -1;
   }
   &__title {
     margin-bottom: 5px;
@@ -31,7 +22,7 @@
 
     transition: color 0.3s ease;
     @include hover {
-      color: var(--primary);
+      color: var(--secondary);
     }
     @include laptop {
       font-size: 80px;
@@ -48,7 +39,7 @@
 
     transition: color 0.3s ease;
     @include hover {
-      color: var(--secondary);
+      color: var(--primary);
     }
     @include tablet {
       font-size: 20px;
@@ -78,6 +69,7 @@
     margin-top: 60px;
     @include tablet {
       margin-top: 30px;
+      gap: 15px;
     }
   }
   &__fix-logo {
@@ -98,5 +90,6 @@
   &__slide {
     width: fit-content;
     max-width: 240px;
+    max-width: 100%;
   }
 }

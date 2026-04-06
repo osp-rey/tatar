@@ -134,17 +134,74 @@
             }
         }
     }
+    function localNav() {
+        const containers = document.querySelectorAll(".local-nav");
+        if (containers.length) containers.forEach(container => {
+            const buttons = container.querySelectorAll("a");
+            buttons.forEach(btn => {
+                btn.addEventListener("click", e => {
+                    e.preventDefault();
+                    const idSect = btn.getAttribute("href");
+                    const sect = document.querySelector(idSect);
+                    sect?.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                        inline: "nearest"
+                    });
+                });
+            });
+        });
+        const sections = document.querySelectorAll(".sect");
+        if (sections.length) {
+            const arrItems = [];
+            if (containers.length) containers.forEach(container => {
+                const items = Array.from(container.querySelectorAll("a"));
+                items.forEach(i => arrItems.push(i));
+            });
+            const options = {
+                root: null,
+                rootMargin: "0px",
+                scrollMargin: "0px",
+                threshold: .01
+            };
+            sections.forEach(section => {
+                const id = section.id;
+                if (id) {
+                    function callback(entries, observer) {
+                        entries.forEach(entry => {
+                            const target = entry.target;
+                            if (entry.isIntersecting) {
+                                arrItems.forEach(i => i.classList.remove("_active"));
+                                const currentItems = arrItems.filter(item => item.getAttribute("href") === `#${id}`);
+                                console.log(section);
+                                if (currentItems.length) currentItems.forEach(i => i.classList.add("_active"));
+                                observer.unobserve(target);
+                            }
+                        });
+                    }
+                    const observer = new IntersectionObserver(callback, options);
+                    observer.observe(section);
+                }
+            });
+        }
+    }
     function sectNav() {
         const sectNav = document.querySelector(".sect-nav");
         if (sectNav) {
+            const sectNavBody = sectNav.querySelector(".sect-nav__body");
             const toggleBtn = document.querySelector(".sect-nav-toggle");
             toggleBtn.addEventListener("click", () => {
                 if (sectNav.classList.contains("_active")) {
                     sectNav.classList.remove("_active");
                     toggleBtn.textContent = "Концерты";
+                    setTimeout(() => {
+                        sectNavBody.style.display = "none";
+                    }, 300);
                 } else {
                     sectNav.classList.add("_active");
+                    sectNavBody.style.display = "block";
                     toggleBtn.textContent = "Закрыть";
+                    setTimeout(() => {}, 300);
                 }
             });
         }
@@ -299,9 +356,15 @@
             new Swiper(contactsSlider, {
                 speed: 900,
                 slidesPerView: "auto",
-                spaceBetween: 30,
+                spaceBetween: 15,
                 autoplay: {
                     delay: 4e3
+                },
+                breakpoints: {
+                    768: {
+                        spaceBetween: 20,
+                        slidesPerView: "auto"
+                    }
                 }
             });
         }
@@ -310,7 +373,6 @@
         const sortButtons = document.querySelectorAll(".s-tours .sort-btn");
         if (sortButtons.length) {
             const items = Array.from(document.querySelectorAll(".s-tours__item"));
-            console.log(items.length);
             const btnMore = document.querySelector(".s-tours__btn-more");
             const toursGrid = document.querySelector(".s-tours__grid");
             function sortByCity() {
@@ -441,6 +503,7 @@
         sectNav();
         teamAudio();
         sortTours();
+        localNav();
         Fancybox.bind("[data-fancybox]");
     });
 })();

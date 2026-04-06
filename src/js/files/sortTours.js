@@ -3,7 +3,6 @@ export default function sortTours() {
 
   if (sortButtons.length) {
     const items = Array.from(document.querySelectorAll(".s-tours__item"));
-    console.log(items.length);
     const btnMore = document.querySelector(".s-tours__btn-more");
     const toursGrid = document.querySelector(".s-tours__grid");
 

@@ -65,6 +65,10 @@
       @include hover {
         color: var(--primary);
       }
+      &._active {
+        color: var(--primary);
+        pointer-events: none;
+      }
     }
   }
   &__end {

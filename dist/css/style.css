@@ -501,6 +501,10 @@ img {
   text-transform: uppercase;
   transition: color .3s ease
 }
+.header__list a._active {
+  color: var(--primary);
+  pointer-events: none
+}
 .header__end {
   display: flex;
   align-items: center;
@@ -600,6 +604,10 @@ img {
 .burger__list a {
   transition: color .3s ease
 }
+.burger__list a._active {
+  pointer-events: none;
+  color: var(--primary)
+}
 .sect-box {
   position: relative;
   overflow: hidden;
@@ -608,6 +616,8 @@ img {
 }
 .sect {
   position: relative;
+  display: flex;
+  align-items: center;
   min-height: 100vh;
   overflow: hidden;
   z-index: 1;
@@ -622,11 +632,14 @@ img {
   bottom: 40px;
   font-family: DINPro,sans-serif;
   z-index: 30;
-  transition: opacity .3s ease,visibility .3s ease,-webkit-transform .3s linear;
-  transition: opacity .3s ease,transform .3s linear,visibility .3s ease;
-  transition: opacity .3s ease,transform .3s linear,visibility .3s ease,-webkit-transform .3s linear
+  transition: background-color .3s ease,backdrop-filter .3s ease
 }
 .sect-nav._active {
+  background-color: rgba(16,31,64,.5);
+  backdrop-filter: blur(15px);
+  right: 0
+}
+.sect-nav._active .sect-nav__body {
   opacity: 1;
   visibility: visible;
   -webkit-transform: translateX(0);
@@ -688,18 +701,19 @@ img {
   border-radius: 30px
 }
 .sect-nav-toggle {
-  position: fixed;
-  left: 15px;
-  bottom: 15px;
   width: 110px;
   max-width: 100%;
-  z-index: 10;
+  margin-left: 15px;
   transition: opacity .3s ease,visibility .3s ease,-webkit-transform .3s linear;
   transition: transform .3s linear,opacity .3s ease,visibility .3s ease;
-  transition: transform .3s linear,opacity .3s ease,visibility .3s ease,-webkit-transform .3s linear
+  transition: transform .3s linear,opacity .3s ease,visibility .3s ease,-webkit-transform .3s linear;
+  margin-top: 15px
 }
 .sect-head {
   margin-bottom: 35px
+}
+.s-hero {
+  align-items: flex-start
 }
 .s-hero__logo {
   display: block;
@@ -714,12 +728,22 @@ img {
   top: 0;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  z-index: -2;
+  z-index: -3;
+  max-width: none
+}
+.s-hero__dust {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+  left: 50%;
+  top: 0;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: -3;
   max-width: none
 }
 .s-team__slider-wrapper {
-  width: 960px;
-  max-width: 100%;
+  width: 100%;
   margin: 0 auto
 }
 .s-team__slider {
@@ -941,18 +965,9 @@ img {
   transition: opacity .3s ease
 }
 .s-contacts {
-  display: flex;
-  align-items: center;
   font-family: DINPro,sans-serif;
   font-weight: 700;
   margin-bottom: 0!important
-}
-.s-contacts::before {
-  position: absolute;
-  content: "";
-  inset: 0;
-  background: rgba(16,31,64,.9);
-  z-index: -1
 }
 .s-contacts__title {
   margin-bottom: 5px
@@ -1004,7 +1019,8 @@ img {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  max-width: 240px
+  max-width: 240px;
+  max-width: 100%
 }
 @media (min-width:768px) {
   .sect-nav-toggle {
@@ -1093,13 +1109,22 @@ img {
     z-index: -999
   }
   .sect {
-    margin: 50px 0;
+    margin: 70px 0;
     min-height: auto;
     padding-top: 0;
-    padding-bottom: 30px
+    padding-bottom: 50px
+  }
+  .sect-nav {
+    padding: 15px 0;
+    bottom: 0;
+    right: auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content
   }
   .sect-nav__tabs-nav {
-    bottom: 160px
+    position: static;
+    margin-bottom: 20px
   }
   .sect-head {
     margin-bottom: 30px
@@ -1174,12 +1199,11 @@ img {
   .s-title {
     font-size: 40px
   }
-  .sect-nav {
-    bottom: 70px;
-    -webkit-transform: translateX(-30px);
-    transform: translateX(-30px);
+  .sect-nav__body {
     opacity: 0;
-    visibility: hidden
+    visibility: hidden;
+    display: none;
+    transition: opacity .3s ease,visibility .3s ease
   }
   .sect-nav__tab-btn {
     font-size: 24px
@@ -1218,7 +1242,8 @@ img {
     font-size: 28px
   }
   .s-contacts__partners {
-    margin-top: 30px
+    margin-top: 30px;
+    gap: 15px
   }
   .s-contacts__fix-logo {
     width: 160px
@@ -1229,7 +1254,6 @@ img {
     font-size: 36px
   }
   .sect-nav {
-    width: 300px;
     max-width: 100%
   }
   .sect-nav__tabs-nav {
@@ -1290,10 +1314,10 @@ img {
     color: var(--primary)
   }
   .s-contacts__tel:hover {
-    color: var(--primary)
+    color: var(--secondary)
   }
   .s-contacts__mail:hover {
-    color: var(--secondary)
+    color: var(--primary)
   }
 }
 @media (hover:none) {
@@ -1338,9 +1362,9 @@ img {
     color: var(--primary)
   }
   .s-contacts__tel:active {
-    color: var(--primary)
+    color: var(--secondary)
   }
   .s-contacts__mail:active {
-    color: var(--secondary)
+    color: var(--primary)
   }
 }

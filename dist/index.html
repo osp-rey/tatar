@@ -8,10 +8,10 @@
 	<link rel="shortcut icon" href="favicon.ico" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20260406144119" rel="stylesheet" />
-	<link rel="stylesheet" href="./files/swiper/swiper.min.css?_v=20260406144119">
-	<link rel="stylesheet" href="./files/fancybox/fancybox.min.css?_v=20260406144119">
-	<link rel="stylesheet" href="css/style.min.css?_v=20260406144119" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20260406161558" rel="stylesheet" />
+	<link rel="stylesheet" href="./files/swiper/swiper.min.css?_v=20260406161558">
+	<link rel="stylesheet" href="./files/fancybox/fancybox.min.css?_v=20260406161558">
+	<link rel="stylesheet" href="css/style.min.css?_v=20260406161558" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
@@ -23,14 +23,14 @@
 					<img src="img/logo.png" alt="logo" />
 				</a>
 				<nav class="header__nav">
-					<ul class="list header__list">
-						<li><a href="#" class="_active">Главная</a></li>
-						<li><a href="#">Приглашенные артисты</a></li>
-						<li><a href="#">О премии</a></li>
-						<li><a href="#">Афиша</a></li>
-						<li><a href="#">Как это было</a></li>
-						<li><a href="#">Фотогалерея</a></li>
-						<li><a href="#">Контакты</a></li>
+					<ul class="list header__list local-nav">
+						<li><a href="#s-hero" class="_active">Главная</a></li>
+						<li><a href="#s-team">Приглашенные артисты</a></li>
+						<li><a href="#s-about">О премии</a></li>
+						<li><a href="#s-tours">Афиша</a></li>
+						<li><a href="#s-history">Как это было</a></li>
+						<li><a href="#s-gallery">Фотогалерея</a></li>
+						<li><a href="#s-contacts">Контакты</a></li>
 					</ul>
 				</nav>
 				<div class="header__end">
@@ -61,14 +61,14 @@
 				</svg>
 			</div>
 		</div>
-		<ul class="list burger__list">
-			<li><a href="#" class="_active">Главная</a></li>
-			<li><a href="#">Приглашенные артисты</a></li>
-			<li><a href="#">О премии</a></li>
-			<li><a href="#">Афиша</a></li>
-			<li><a href="#">Как это было</a></li>
-			<li><a href="#">Фотогалерея</a></li>
-			<li><a href="#">Контакты</a></li>
+		<ul class="list burger__list local-nav">
+			<li><a href="#s-hero" class="_active">Главная</a></li>
+			<li><a href="#s-team">Приглашенные артисты</a></li>
+			<li><a href="#s-about">О премии</a></li>
+			<li><a href="#s-tours">Афиша</a></li>
+			<li><a href="#s-history">Как это было</a></li>
+			<li><a href="#s-gallery">Фотогалерея</a></li>
+			<li><a href="#s-contacts">Контакты</a></li>
 		</ul>
 	</aside>
 
@@ -78,6 +78,7 @@
         ">
 			<section class="s-hero sect" id="s-hero">
 				<img src="img/logo-hero.png" alt="logo" class="s-hero__logo">
+				<img src="img/dust.png" alt="image" class="s-hero__dust">
 				<img src="img/hero-2.png" alt="image" class="s-hero__img">
 			</section>
 			<section class="s-team sect" id="s-team">
@@ -574,9 +575,7 @@
 				</div>
 			</section>
 
-			<section class="sect s-contacts" id="s-contacts" style="
-    background: url(&quot;img/contacts.jpg&quot;) center / cover no-repeat;
-  ">
+			<section class="sect s-contacts" id="s-contacts">
 				<div class="container">
 					<h2 class="s-subtitle s-contacts__title">КОНТАКТЫ</h2>
 					<a href="tel:8800308030" class="s-contacts__tel">8 800 30-80-30</a>
@@ -633,7 +632,7 @@
 			</section>
 
 			<div class="sect-nav">
-				<div class="container tabs">
+				<div class="container tabs sect-nav__body">
 					<div class="sect-nav__tabs-nav tabs-nav">
 						<div data-tab-btn="sect-nav-tab-1" class="sect-nav__tab-btn _active">
 							казань
@@ -686,8 +685,8 @@
 						</div>
 					</div>
 				</div>
+				<div class="sect-nav-toggle btn-s _outline">Концерты</div>
 			</div>
-			<div class="sect-nav-toggle btn-s _outline">Концерты</div>
 
 		</div>
 
@@ -697,12 +696,12 @@
 		</div>
 	</footer>
 
-	<script src="./files/swiper/swiper.min.js?_v=20260406144119"></script>
-	<script src="./files/gsap/gsap.min.js?_v=20260406144119"></script>
-	<script src="./files/gsap/scroll-to.min.js?_v=20260406144119"></script>
-	<script src="./files/fancybox/fancybox.min.js?_v=20260406144119"></script>
+	<script src="./files/swiper/swiper.min.js?_v=20260406161558"></script>
+	<script src="./files/gsap/gsap.min.js?_v=20260406161558"></script>
+	<script src="./files/gsap/scroll-to.min.js?_v=20260406161558"></script>
+	<script src="./files/fancybox/fancybox.min.js?_v=20260406161558"></script>
 
-	<script src="js/app.min.js?_v=20260406144119"></script>
+	<script src="js/app.min.js?_v=20260406161558"></script>
 </body>
 
 </html>

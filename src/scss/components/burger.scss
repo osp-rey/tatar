@@ -91,6 +91,11 @@
       @include hover {
         color: var(--primary);
       }
+
+      &._active {
+        pointer-events: none;
+        color: var(--primary);
+      }
     }
   }
 }
