@@ -169,13 +169,11 @@
                 if (id) {
                     function callback(entries, observer) {
                         entries.forEach(entry => {
-                            const target = entry.target;
+                            entry.target;
                             if (entry.isIntersecting) {
                                 arrItems.forEach(i => i.classList.remove("_active"));
                                 const currentItems = arrItems.filter(item => item.getAttribute("href") === `#${id}`);
-                                console.log(section);
                                 if (currentItems.length) currentItems.forEach(i => i.classList.add("_active"));
-                                observer.unobserve(target);
                             }
                         });
                     }
@@ -368,6 +366,31 @@
                 }
             });
         }
+        const gallerySliders = document.querySelectorAll(".s-gallery__slider");
+        if (gallerySliders.length) gallerySliders.forEach(slider => {
+            new Swiper(slider, {
+                speed: 900,
+                slidesPerView: 1,
+                spaceBetween: 15,
+                autoplay: {
+                    delay: 4500
+                },
+                navigation: {
+                    prevEl: slider.querySelector(".slider-arrow._prev"),
+                    nextEl: slider.querySelector(".slider-arrow._next")
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    576: {
+                        slidesPerView: 2,
+                        spaceBetween: 15
+                    }
+                }
+            });
+        });
     }
     function sortTours() {
         const sortButtons = document.querySelectorAll(".s-tours .sort-btn");

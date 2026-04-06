@@ -1,3 +1,6 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
 .slider-scrollbar {
   height: 5px;
   background-color: white;
@@ -8,5 +11,54 @@
   .swiper-scrollbar-drag {
     background-color: var(--primary);
     border-radius: 4px;
+  }
+}
+
+.slider-arrow {
+  @include flex-center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  z-index: 10;
+
+  transition: opacity 0.3s ease;
+
+  @include hover {
+    opacity: 0.8;
+  }
+  @include tablet {
+    width: 45px;
+    height: 45px;
+  }
+
+  &._prev {
+    left: 10px;
+    svg {
+      transform: translateX(-1px);
+    }
+  }
+  &._next {
+    right: 10px;
+    svg {
+      transform: translateX(1px);
+    }
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+    @include tablet {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  &.swiper-button-disabled {
+    opacity: 0;
+    pointer-events: none;
   }
 }

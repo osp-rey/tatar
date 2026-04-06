@@ -49,14 +49,13 @@ export default function localNav() {
 
             if (entry.isIntersecting) {
               arrItems.forEach(i => i.classList.remove("_active"))
-              const currentItems = arrItems.filter(item => item.getAttribute("href") === `#${id}`);
-              console.log(section)
+              const currentItems = arrItems.filter(item => {
+                return item.getAttribute("href") === `#${id}`;
+              });
 
               if (currentItems.length) {
                 currentItems.forEach((i) => i.classList.add("_active"));
               }
-
-              observer.unobserve(target);
             }
           });
         }

@@ -1,0 +1,76 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.s-gallery {
+  &__tabs-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    row-gap: 10px;
+    margin-bottom: 30px;
+    @include laptop-min {
+      gap: 10px
+    }
+  }
+  &__tab-btn {
+    @include flex-center;
+    position: relative;
+    min-width: 110px;
+    background: linear-gradient(90deg, #142b5e 0%, #5a6d9b 100%);
+    padding: 14px 20px;
+    border-radius: 30px;
+    overflow: hidden;
+    cursor: pointer;
+
+    user-select: none;
+    font-family: "DINPro", sans-serif;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+
+    z-index: 1;
+
+    @include laptop-min {
+      font-size: 16px;
+      padding: 12px 16px;
+      min-width: 80px;
+    }
+
+    &._active {
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 0;
+      background: linear-gradient(90deg, #eeca71 0%, #a87f30 100%);
+      opacity: 0;
+      z-index: -1;
+
+      transition: opacity 0.3s ease;
+    }
+  }
+  &__slide {
+    overflow: hidden;
+    aspect-ratio: 1/0.6;
+    outline: none;
+
+    @include hover {
+      img {
+        transform: scale(1.08);
+      }
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      transition: transform 0.3s linear;
+    }
+  }
+}
