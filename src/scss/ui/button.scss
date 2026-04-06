@@ -3,7 +3,6 @@
 
 .btn-s {
   --background: var(--primary);
-  --border: var(--primary);
   --color: white;
 
   --background-h: rgba(227, 62, 209, 0.7);
@@ -36,5 +35,32 @@
   @include hover {
     background-color: var(--background-h);
     color: var(--color-h);
+  }
+}
+
+.btn-play {
+  --background: var(--primary);
+
+  --background-h: rgba(227, 62, 209, 0.7);
+
+  @include flex-center;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: var(--background);
+  width: 54px;
+  height: 54px;
+
+
+  user-select: none;
+
+  transition: background-color .3s ease;
+  @include hover {
+    background-color: var(--background-h);
+  }
+
+  img {
+    pointer-events: none;
+    width: 16px;
+    height: 16px;
   }
 }

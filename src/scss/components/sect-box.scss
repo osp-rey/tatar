@@ -14,6 +14,7 @@
   overflow: hidden;
   z-index: 1;
   padding-top: 135px;
+  padding-bottom: 50px;
   @include laptop-min {
     margin: 50px 0px;
     min-height: auto;
@@ -141,5 +142,12 @@
     visibility 0.3s ease;
   @media (min-width: 768px) {
     display: none;
+  }
+}
+
+.sect-head {
+  margin-bottom: 35px;
+  @include laptop-min {
+    margin-bottom: 30px;
   }
 }

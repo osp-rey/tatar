@@ -15,6 +15,8 @@
 @use "./ui/tab";
 @use "./ui/card-team";
 @use "./ui/slider";
+@use "./ui/title";
+@use "./ui/more-item";
 
 // components
 @use "./components/header";
@@ -24,5 +26,8 @@
 @use "./components/s-hero";
 @use "./components/s-team";
 @use "./components/s-about";
+@use "./components/s-tours";
+@use "./components/s-history";
+@use "./components/s-contacts";
 
 @use "./components/footer";

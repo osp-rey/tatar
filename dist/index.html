@@ -1,0 +1,708 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Татар Жыры</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20260406144119" rel="stylesheet" />
+	<link rel="stylesheet" href="./files/swiper/swiper.min.css?_v=20260406144119">
+	<link rel="stylesheet" href="./files/fancybox/fancybox.min.css?_v=20260406144119">
+	<link rel="stylesheet" href="css/style.min.css?_v=20260406144119" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="body">
+	<header class="header">
+		<div class="container">
+			<div class="header__wrapper">
+				<a href="/" class="header__logo">
+					<img src="img/logo.png" alt="logo" />
+				</a>
+				<nav class="header__nav">
+					<ul class="list header__list">
+						<li><a href="#" class="_active">Главная</a></li>
+						<li><a href="#">Приглашенные артисты</a></li>
+						<li><a href="#">О премии</a></li>
+						<li><a href="#">Афиша</a></li>
+						<li><a href="#">Как это было</a></li>
+						<li><a href="#">Фотогалерея</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</nav>
+				<div class="header__end">
+					<div class="lang-toggle">
+						<div class="lang-toggle-btn _active">Ru</div>
+						<div class="lang-toggle-btn">Tat</div>
+					</div>
+					<div class="header__age">6+</div>
+					<div class="header__burger-btn" id="burger-open">
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="burger-overlay" id="burger-overlay"></div>
+	<aside class="burger" id="burger">
+		<div class="burger__head">
+			<a href="/" class="burger__logo">
+				<img src="img/logo.png" alt="logo" />
+			</a>
+			<div class="burger__close" id="burger-close">
+				<svg>
+					<use xlink:href="img/icons/icons.svg#icon-close"></use>
+				</svg>
+			</div>
+		</div>
+		<ul class="list burger__list">
+			<li><a href="#" class="_active">Главная</a></li>
+			<li><a href="#">Приглашенные артисты</a></li>
+			<li><a href="#">О премии</a></li>
+			<li><a href="#">Афиша</a></li>
+			<li><a href="#">Как это было</a></li>
+			<li><a href="#">Фотогалерея</a></li>
+			<li><a href="#">Контакты</a></li>
+		</ul>
+	</aside>
+
+	<main>
+		<div class="sect-box" style="
+          background: url(&quot;img/bg.jpg&quot;) center / cover no-repeat;
+        ">
+			<section class="s-hero sect" id="s-hero">
+				<img src="img/logo-hero.png" alt="logo" class="s-hero__logo">
+				<img src="img/hero-2.png" alt="image" class="s-hero__img">
+			</section>
+			<section class="s-team sect" id="s-team">
+				<div class="container">
+					<div class="s-team__slider-wrapper">
+						<div class="swiper s-team__slider">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<article class="card-team">
+										<img src="img/team.png" alt="image" class="card-team__img" />
+										<div class="card-team__body">
+											<h3 class="card-team__title">Эльмира Калимуллина</h3>
+											<div class="card-team__btn" data-audio-url="./files/music.mp3">
+												<svg class="icon-play">
+													<use xlink:href="img/icons/icons.svg#icon-play"></use>
+												</svg>
+												<svg class="icon-pause">
+													<use xlink:href="img/icons/icons.svg#icon-pause"></use>
+												</svg>
+												<span>Слушать</span>
+											</div>
+										</div>
+									</article>
+								</div>
+								<div class="swiper-slide">
+									<article class="card-team">
+										<img src="img/team.png" alt="image" class="card-team__img" />
+										<div class="card-team__body">
+											<h3 class="card-team__title">Эльмира Калимуллина</h3>
+											<div class="card-team__btn" data-audio-url="./files/music.mp3">
+												<svg class="icon-play">
+													<use xlink:href="img/icons/icons.svg#icon-play"></use>
+												</svg>
+												<svg class="icon-pause">
+													<use xlink:href="img/icons/icons.svg#icon-pause"></use>
+												</svg>
+												<span>Слушать</span>
+											</div>
+										</div>
+									</article>
+								</div>
+								<div class="swiper-slide">
+									<article class="card-team">
+										<img src="img/team.png" alt="image" class="card-team__img" />
+										<div class="card-team__body">
+											<h3 class="card-team__title">Эльмира Калимуллина</h3>
+											<div class="card-team__btn" data-audio-url="./files/music.mp3">
+												<svg class="icon-play">
+													<use xlink:href="img/icons/icons.svg#icon-play"></use>
+												</svg>
+												<svg class="icon-pause">
+													<use xlink:href="img/icons/icons.svg#icon-pause"></use>
+												</svg>
+												<span>Слушать</span>
+											</div>
+										</div>
+									</article>
+								</div>
+								<div class="swiper-slide">
+									<article class="card-team">
+										<img src="img/team.png" alt="image" class="card-team__img" />
+										<div class="card-team__body">
+											<h3 class="card-team__title">Эльмира Калимуллина</h3>
+											<div class="card-team__btn" data-audio-url="./files/music.mp3">
+												<svg class="icon-play">
+													<use xlink:href="img/icons/icons.svg#icon-play"></use>
+												</svg>
+												<svg class="icon-pause">
+													<use xlink:href="img/icons/icons.svg#icon-pause"></use>
+												</svg>
+												<span>Слушать</span>
+											</div>
+										</div>
+									</article>
+								</div>
+								<div class="swiper-slide">
+									<article class="card-team">
+										<img src="img/team.png" alt="image" class="card-team__img" />
+										<div class="card-team__body">
+											<h3 class="card-team__title">Эльмира Калимуллина</h3>
+											<div class="card-team__btn" data-audio-url="./files/music.mp3">
+												<svg class="icon-play">
+													<use xlink:href="img/icons/icons.svg#icon-play"></use>
+												</svg>
+												<svg class="icon-pause">
+													<use xlink:href="img/icons/icons.svg#icon-pause"></use>
+												</svg>
+												<span>Слушать</span>
+											</div>
+										</div>
+									</article>
+								</div>
+							</div>
+						</div>
+						<div class="slider-scrollbar"></div>
+					</div>
+				</div>
+			</section>
+
+			<sections class="sect s-about" id="s-about">
+				<div class="container">
+					<div class="s-about__wrapper">
+						<h1 class="s-about__title">
+							Татар Жыры 26 / ГЛАВНЫЙ ТАТАРСКИЙ КОНЦЕРТ года
+						</h1>
+						<div class="s-about__content">
+							<p>
+								Фестиваль «Татар Жыры», перешагнув свой 25-ти летний юбилей, открывает
+								новую страницу в истории эстрадных музыкальных праздников.Еще больше
+								мэтров татарской эстрады, еще разнообразнее выступления молодых
+								хитмейкеров, еще виртуознее сценография.
+							</p>
+							<p>
+								Меняются обстоятельства, сезоны, даты, декорации, но неизменным
+								остается одно – вот уже четверть века между Фестивалем «Татар Жыры» и
+								зрителем неразрывно существует особая, тесная связь. Мы уверены, что
+								наша новая встреча обязательно принесет море искренних эмоций. Каждая
+								звучащая со сцены песня затронет струны загадочной татарской души
+							</p>
+						</div>
+					</div>
+				</div>
+				<img src="img/about-decor.png" alt="" class="s-about__decor">
+			</sections>
+
+			<section class="s-tours sect" id="s-tours">
+				<img src="img/tours-img.png" alt="image" class="s-tours__decor">
+				<div class="container">
+					<div class="sect-head">
+						<div class="s-subtitle">АФИША</div>
+						<div class="s-tours__head-wrapper">
+							<h2 class="s-title">
+								Тур по
+								<span>20 городам</span>
+								России
+							</h2>
+							<div class="s-tours__sort">
+								<div class="text">сортировать по:</div>
+								<div class="sort-btn" data-sort-type="city">Городам</div>
+								<div class="sort-btn" data-sort-type="date">Датам</div>
+							</div>
+						</div>
+					</div>
+					<div class="container-more">
+						<div class="s-tours__grid">
+							<div class="s-tours__item" data-date="03.10.2020" data-city="Нефтекамск">
+								<div class="title">
+									<span>03.10.2020</span>
+									Нефтекамск
+								</div>
+								<div class="text">Дом Культуры «Нефтяник»</div>
+								<a href="#" target="_blank" class="btn">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-ticket"></use>
+									</svg>
+									<span>Купить билет</span>
+								</a>
+							</div>
+							<div class="s-tours__item" data-date="08.10.2020" data-city="Нижневартовск">
+								<div class="title">
+									<span>08.10.2020</span>
+									Нижневартовск
+								</div>
+								<div class="text">Дом Культуры «Октябрь»</div>
+								<a href="#" target="_blank" class="btn">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-ticket"></use>
+									</svg>
+									<span>Купить билет</span>
+								</a>
+							</div>
+							<div class="s-tours__item" data-date="12.10.2020" data-city="Челябинск">
+								<div class="title">
+									<span>12.10.2020</span>
+									Челябинск
+								</div>
+								<div class="text">Конгресс-холл</div>
+								<a href="#" target="_blank" class="btn">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-ticket"></use>
+									</svg>
+									<span>Купить билет</span>
+								</a>
+							</div>
+							<div class="s-tours__item" data-date="03.11.2026" data-city="Уфа">
+								<div class="title">
+									<span>03.11.2026</span>
+									Уфа
+								</div>
+								<div class="text">Дворец молодежи</div>
+								<a href="#" target="_blank" class="btn">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-ticket"></use>
+									</svg>
+									<span>Купить билет</span>
+								</a>
+							</div>
+							<div class="s-tours__item" data-date="09.03.2020" data-city="Нижневартовск">
+								<div class="title">
+									<span>09.03.2020</span>
+									Нижневартовск
+								</div>
+								<div class="text">Дом Культуры «Октябрь»</div>
+								<a href="#" target="_blank" class="btn">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-ticket"></use>
+									</svg>
+									<span>Купить билет</span>
+								</a>
+							</div>
+							<div class="s-tours__item" data-date="05.10.2024" data-city="Магнитогорск">
+								<div class="title">
+									<span>05.10.2024</span>
+									Магнитогорск
+								</div>
+								<div class="text">Конгресс-холл</div>
+								<a href="#" target="_blank" class="btn">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-ticket"></use>
+									</svg>
+									<span>Купить билет</span>
+								</a>
+							</div>
+							<div class="s-tours__item" data-date="03.10.2020" data-city="Нефтекамск">
+								<div class="title">
+									<span>03.10.2020</span>
+									Нефтекамск
+								</div>
+								<div class="text">Дом Культуры «Нефтяник»</div>
+								<a href="#" target="_blank" class="btn">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-ticket"></use>
+									</svg>
+									<span>Купить билет</span>
+								</a>
+							</div>
+							<div class="s-tours__item" data-date="08.10.2020" data-city="Нижневартовск">
+								<div class="title">
+									<span>08.10.2020</span>
+									Нижневартовск
+								</div>
+								<div class="text">Дом Культуры «Октябрь»</div>
+								<a href="#" target="_blank" class="btn">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-ticket"></use>
+									</svg>
+									<span>Купить билет</span>
+								</a>
+							</div>
+							<div class="s-tours__item" data-date="12.10.2020" data-city="Челябинск">
+								<div class="title">
+									<span>12.10.2020</span>
+									Челябинск
+								</div>
+								<div class="text">Конгресс-холл</div>
+								<a href="#" target="_blank" class="btn">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-ticket"></use>
+									</svg>
+									<span>Купить билет</span>
+								</a>
+							</div>
+							<div class="s-tours__item" data-date="03.11.2026" data-city="Уфа">
+								<div class="title">
+									<span>03.11.2026</span>
+									Уфа
+								</div>
+								<div class="text">Дворец молодежи</div>
+								<a href="#" target="_blank" class="btn">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-ticket"></use>
+									</svg>
+									<span>Купить билет</span>
+								</a>
+							</div>
+							<div class="s-tours__item" data-date="09.03.2020" data-city="Нижневартовск">
+								<div class="title">
+									<span>09.03.2020</span>
+									Нижневартовск
+								</div>
+								<div class="text">Дом Культуры «Октябрь»</div>
+								<a href="#" target="_blank" class="btn">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-ticket"></use>
+									</svg>
+									<span>Купить билет</span>
+								</a>
+							</div>
+							<div class="s-tours__item" data-date="12.10.2020" data-city="Магнитогорск">
+								<div class="title">
+									<span>05.10.2024</span>
+									Магнитогорск
+								</div>
+								<div class="text">Конгресс-холл</div>
+								<a href="#" target="_blank" class="btn">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-ticket"></use>
+									</svg>
+									<span>Купить билет</span>
+								</a>
+							</div>
+							<div class="s-tours__item" data-date="03.10.2020" data-city="Нефтекамск">
+								<div class="title">
+									<span>03.10.2020</span>
+									Нефтекамск
+								</div>
+								<div class="text">Дом Культуры «Нефтяник»</div>
+								<a href="#" target="_blank" class="btn">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-ticket"></use>
+									</svg>
+									<span>Купить билет</span>
+								</a>
+							</div>
+							<div class="s-tours__item" data-date="08.10.2020" data-city="Нижневартовск">
+								<div class="title">
+									<span>08.10.2020</span>
+									Нижневартовск
+								</div>
+								<div class="text">Дом Культуры «Октябрь»</div>
+								<a href="#" target="_blank" class="btn">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-ticket"></use>
+									</svg>
+									<span>Купить билет</span>
+								</a>
+							</div>
+							<div class="s-tours__item" data-date="12.10.2020" data-city="Челябинск">
+								<div class="title">
+									<span>12.10.2020</span>
+									Челябинск
+								</div>
+								<div class="text">Конгресс-холл</div>
+								<a href="#" target="_blank" class="btn">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-ticket"></use>
+									</svg>
+									<span>Купить билет</span>
+								</a>
+							</div>
+							<div class="s-tours__item" data-date="03.11.2026" data-city="Уфа">
+								<div class="title">
+									<span>03.11.2026</span>
+									Уфа
+								</div>
+								<div class="text">Дворец молодежи</div>
+								<a href="#" target="_blank" class="btn">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-ticket"></use>
+									</svg>
+									<span>Купить билет</span>
+								</a>
+							</div>
+							<div class="s-tours__item" data-date="09.03.2020" data-city="Нижневартовск">
+								<div class="title">
+									<span>09.03.2020</span>
+									Нижневартовск
+								</div>
+								<div class="text">Дом Культуры «Октябрь»</div>
+								<a href="#" target="_blank" class="btn">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-ticket"></use>
+									</svg>
+									<span>Купить билет</span>
+								</a>
+							</div>
+							<div class="s-tours__item" data-date="05.10.2024" data-city="Магнитогорск">
+								<div class="title">
+									<span>05.10.2024</span>
+									Магнитогорск
+								</div>
+								<div class="text">Конгресс-холл</div>
+								<a href="#" target="_blank" class="btn">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-ticket"></use>
+									</svg>
+									<span>Купить билет</span>
+								</a>
+							</div>
+							<div class="s-tours__item" data-date="03.10.2020" data-city="Нефтекамск">
+								<div class="title">
+									<span>03.10.2020</span>
+									Нефтекамск
+								</div>
+								<div class="text">Дом Культуры «Нефтяник»</div>
+								<a href="#" target="_blank" class="btn">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-ticket"></use>
+									</svg>
+									<span>Купить билет</span>
+								</a>
+							</div>
+							<div class="s-tours__item" data-date="08.10.2020" data-city="Нижневартовск">
+								<div class="title">
+									<span>08.10.2020</span>
+									Нижневартовск
+								</div>
+								<div class="text">Дом Культуры «Октябрь»</div>
+								<a href="#" target="_blank" class="btn">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-ticket"></use>
+									</svg>
+									<span>Купить билет</span>
+								</a>
+							</div>
+							<div class="s-tours__item" data-date="12.10.2020" data-city="Челябинск">
+								<div class="title">
+									<span>12.10.2020</span>
+									Челябинск
+								</div>
+								<div class="text">Конгресс-холл</div>
+								<a href="#" target="_blank" class="btn">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-ticket"></use>
+									</svg>
+									<span>Купить билет</span>
+								</a>
+							</div>
+							<div class="s-tours__item" data-date="03.11.2026" data-city="Уфа">
+								<div class="title">
+									<span>03.11.2026</span>
+									Уфа
+								</div>
+								<div class="text">Дворец молодежи</div>
+								<a href="#" target="_blank" class="btn">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-ticket"></use>
+									</svg>
+									<span>Купить билет</span>
+								</a>
+							</div>
+							<div class="s-tours__item" data-date="09.03.2020" data-city="Нижневартовск">
+								<div class="title">
+									<span>09.03.2020</span>
+									Нижневартовск
+								</div>
+								<div class="text">Дом Культуры «Октябрь»</div>
+								<a href="#" target="_blank" class="btn">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-ticket"></use>
+									</svg>
+									<span>Купить билет</span>
+								</a>
+							</div>
+							<div class="s-tours__item" data-date="12.10.2020" data-city="Магнитогорск">
+								<div class="title">
+									<span>05.10.2024</span>
+									Магнитогорск
+								</div>
+								<div class="text">Конгресс-холл</div>
+								<a href="#" target="_blank" class="btn">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-ticket"></use>
+									</svg>
+									<span>Купить билет</span>
+								</a>
+							</div>
+						</div>
+						<div class="s-tours__line"></div>
+						<div class="s-tours__btn-more">
+							<svg>
+								<use xlink:href='img/icons/icons.svg#icon-arrow-down'></use>
+							</svg>
+							<span>раскрыть все города</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="sect s-history" id="s-history">
+				<div class="container">
+					<div class="sect-head">
+						<h2 class="s-title">
+							Как это
+							<span>было</span>
+						</h2>
+					</div>
+					<div class="s-history__wrapper">
+						<a href="img/bg.jpg" data-fancybox class="s-history__gallery">
+							<img src="img/history-img.jpg" alt="image" class="s-history__img" />
+							<div class="btn-play">
+								<img src="img/play-icon.svg" alt="icon" />
+							</div>
+						</a>
+						<div class="s-history__info">
+							<div class="s-history__year">2027</div>
+							<p class="s-history__content">
+								Лучшие песни последних лет, <span>лучшие исполнители</span>, лучший вечер уходящего
+								года!
+							</p>
+							<a href="img/about-decor.png" data-fancybox="" class="s-history__btn">АРХИВ КОНЦЕРТОВ “ТАТАР ЖЫРЫ”</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="sect s-contacts" id="s-contacts" style="
+    background: url(&quot;img/contacts.jpg&quot;) center / cover no-repeat;
+  ">
+				<div class="container">
+					<h2 class="s-subtitle s-contacts__title">КОНТАКТЫ</h2>
+					<a href="tel:8800308030" class="s-contacts__tel">8 800 30-80-30</a>
+					<a href="mailto:Office@barsmg.ru" class="s-contacts__mail">
+						Office@barsmg.ru
+					</a>
+					<div class="s-contacts__address">
+						Казань, ул. Сибирский тракт, д. 34, корпус 4, офис 347
+					</div>
+					<div class="s-contacts__partners">
+						<img src="img/logo.png" alt="logo" class="s-contacts__fix-logo" />
+						<div class="swiper s-contacts__slider">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide s-contacts__slide">
+									<img src="img/logo-partner-1.png" alt="logo" />
+								</div>
+								<div class="swiper-slide s-contacts__slide">
+									<img src="img/logo-partner-2.png" alt="logo" />
+								</div>
+								<div class="swiper-slide s-contacts__slide">
+									<img src="img/logo-partner-1.png" alt="logo" />
+								</div>
+								<div class="swiper-slide s-contacts__slide">
+									<img src="img/logo-partner-2.png" alt="logo" />
+								</div>
+								<div class="swiper-slide s-contacts__slide">
+									<img src="img/logo-partner-1.png" alt="logo" />
+								</div>
+								<div class="swiper-slide s-contacts__slide">
+									<img src="img/logo-partner-2.png" alt="logo" />
+								</div>
+								<div class="swiper-slide s-contacts__slide">
+									<img src="img/logo-partner-1.png" alt="logo" />
+								</div>
+								<div class="swiper-slide s-contacts__slide">
+									<img src="img/logo-partner-2.png" alt="logo" />
+								</div>
+								<div class="swiper-slide s-contacts__slide">
+									<img src="img/logo-partner-1.png" alt="logo" />
+								</div>
+								<div class="swiper-slide s-contacts__slide">
+									<img src="img/logo-partner-2.png" alt="logo" />
+								</div>
+								<div class="swiper-slide s-contacts__slide">
+									<img src="img/logo-partner-1.png" alt="logo" />
+								</div>
+								<div class="swiper-slide s-contacts__slide">
+									<img src="img/logo-partner-2.png" alt="logo" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<div class="sect-nav">
+				<div class="container tabs">
+					<div class="sect-nav__tabs-nav tabs-nav">
+						<div data-tab-btn="sect-nav-tab-1" class="sect-nav__tab-btn _active">
+							казань
+						</div>
+						<div data-tab-btn="sect-nav-tab-2" class="sect-nav__tab-btn">уфа</div>
+						<div data-tab-btn="sect-nav-tab-3" class="sect-nav__tab-btn">москва</div>
+					</div>
+					<div class="sect-nav__wrapper">
+						<div class="tabs-content">
+							<div data-tab="sect-nav-tab-1" class="_active _show">
+								<div class="sect-nav__info">
+									<div class="sect-nav__info-item _date">19/12</div>
+									<div class="sect-nav__info-item">Казань экспо</div>
+									<a href="#" target="_blank" rel="nofollow" class="btn-s sect-nav__info-btn">
+										Купить билет без наценки
+									</a>
+								</div>
+							</div>
+							<div data-tab="sect-nav-tab-2">
+								<div class="sect-nav__info">
+									<div class="sect-nav__info-item _date">19/12</div>
+									<div class="sect-nav__info-item">Уфа экспо</div>
+									<a href="#" target="_blank" rel="nofollow" class="btn-s sect-nav__info-btn">
+										Купить билет без наценки
+									</a>
+								</div>
+							</div>
+							<div data-tab="sect-nav-tab-3">
+								<div class="sect-nav__info">
+									<div class="sect-nav__info-item _date">19/12</div>
+									<div class="sect-nav__info-item">Москва экспо</div>
+									<a href="#" target="_blank" rel="nofollow" class="btn-s sect-nav__info-btn">
+										Купить билет без наценки
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="sect-nav__player a-player" data-src="./files/music.mp3">
+							<div class="a-player-btn"></div>
+							<div class="a-player-body">
+								<div class="a-player-name">Гимн Татар жыры</div>
+								<div class="a-player-progressbar">
+									<input type="range" min="0" max="100" step="1" class="a-player-progressbar-range" />
+								</div>
+								<div class="a-player-time">
+									<div class="a-player-time-current">00:00</div>
+									<div class="a-player-time-full"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sect-nav-toggle btn-s _outline">Концерты</div>
+
+		</div>
+
+	</main>
+	<footer class="footer">
+		<div class="container">
+		</div>
+	</footer>
+
+	<script src="./files/swiper/swiper.min.js?_v=20260406144119"></script>
+	<script src="./files/gsap/gsap.min.js?_v=20260406144119"></script>
+	<script src="./files/gsap/scroll-to.min.js?_v=20260406144119"></script>
+	<script src="./files/fancybox/fancybox.min.js?_v=20260406144119"></script>
+
+	<script src="js/app.min.js?_v=20260406144119"></script>
+</body>
+
+</html>

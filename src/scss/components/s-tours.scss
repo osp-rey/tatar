@@ -1,0 +1,147 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.s-tours {
+  overflow: visible !important;
+  &__decor {
+    position: absolute;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+    z-index: -1;
+  }
+  &__head-wrapper {
+    @include flex-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  &__sort {
+    font-family: "DINPro", sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+
+    .sort-btn {
+      cursor: pointer;
+      user-select: none;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      color: var(--secondary);
+
+      transition: color 0.3s ease;
+
+      &._active {
+        pointer-events: none;
+        color: var(--primary);
+      }
+      @include hover {
+        color: var(--primary);
+      }
+    }
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 130px;
+    row-gap: 30px;
+    @include laptop-middle {
+      gap: 50px;
+      row-gap: 30px;
+    }
+    @include laptop-min {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+    @include tablet-min {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+  &__item {
+    gap: 3px;
+    text-transform: uppercase;
+
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
+
+    &:not(:nth-child(-n + 12)) {
+      display: none;
+    }
+
+    .title {
+      font-family: "DINPro", sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 175%;
+
+      span {
+        color: var(--secondary);
+      }
+    }
+    .text {
+    }
+    .btn {
+      font-family: "DINPro", sans-serif;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      margin-top: 5px;
+      width: fit-content;
+
+      transition: color 0.3s ease;
+
+      @include hover {
+        color: var(--primary);
+      }
+
+      svg {
+        width: 22px;
+        height: 12px;
+        flex-shrink: 0;
+      }
+    }
+  }
+  &__line {
+    border-radius: 3px;
+    background: linear-gradient(90deg, #edc970 0%, #a87f30 100%);
+    height: 3px;
+    margin-top: 30px;
+    @include laptop-min {
+      margin-top: 20px;
+    }
+  }
+  &__btn-more {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin-top: 25px;
+    cursor: pointer;
+
+    font-family: "DINPro", sans-serif;
+    user-select: none;
+    font-size: 18px;
+    font-weight: 700;
+    gap: 12px;
+    text-transform: uppercase;
+    text-underline-offset: 3px;
+    text-decoration: underline;
+
+    transition: color .3s ease;
+
+    @include hover {
+      color: var(--primary);
+    }
+
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}

@@ -10,6 +10,9 @@ export default function sliders() {
         el: ".s-team .slider-scrollbar",
         draggable: true,
       },
+      autoplay: {
+        delay: 5000
+      },
       breakpoints: {
         992: {
           spaceBetween: 20,
@@ -22,4 +25,19 @@ export default function sliders() {
       },
     });
   }
+
+  const contactsSlider = document.querySelector(".s-contacts__slider");
+
+  if (contactsSlider) {
+    const swiper = new Swiper(contactsSlider, {
+      speed: 900,
+      slidesPerView: "auto",
+      spaceBetween: 30,
+      autoplay: {
+        delay: 4000
+      }
+    })
+  }
 }
+
+

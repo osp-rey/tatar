@@ -1,1 +1,37 @@
+@use '../base/templates' as *;
+@use '../base/media' as *;
 
+.s-subtitle {
+  font-family: "DINPro", sans-serif;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 120%;
+  text-transform: uppercase;
+  margin: 0px 0px 10px 0px;
+  @include laptop-min {
+    font-size: 28px;
+  }
+}
+
+.s-title {
+  font-family: "DINPro", sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 117%;
+  text-transform: uppercase;
+  margin: 0;
+
+  @include laptop {
+    font-size: 54px;
+  }
+  @include laptop-min {
+    font-size: 48px;
+  }
+  @include tablet {
+    font-size: 40px;
+  }
+
+  span {
+    color: var(--primary);
+  }
+}
