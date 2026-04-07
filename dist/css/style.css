@@ -585,7 +585,7 @@ img {
   overflow-y: auto;
   top: 0;
   left: 0;
-  height: 100svh;
+  height: 100%;
   width: 350px;
   max-width: 100%;
   color: #fff;
@@ -648,8 +648,7 @@ img {
 .sect-box {
   position: relative;
   overflow: hidden;
-  min-height: 100vh;
-  background-attachment: fixed!important
+  min-height: 100vh
 }
 .sect {
   position: relative;

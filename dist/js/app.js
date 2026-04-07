@@ -116,6 +116,12 @@
                 burger.classList.remove("_open");
                 burgerOverlay.classList.remove("_active");
             }
+            function updateHeightBurger() {
+                burger.style.maxHeight = `${window.visualViewport.height}px`;
+            }
+            window.visualViewport.addEventListener("resize", updateHeightBurger);
+            window.visualViewport.addEventListener("scroll", updateHeightBurger);
+            updateHeightBurger();
         }
     }
     function headerScroll() {
