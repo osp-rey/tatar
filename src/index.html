@@ -1,15 +1,15 @@
 <!doctype html>
 <html>
   @@include('html/head.html',{ "title":"pauchoo0k" })
-  <body class="body">
+  <body
+    class="body"
+    style="
+      background: url(&quot;@img/bg.jpg&quot;) center / cover no-repeat fixed;
+    "
+  >
     @@include('html/components/header.html')
     <main>
-      <div
-        class="sect-box"
-        style="
-          background: url(&quot;@img/bg.jpg&quot;) center / cover no-repeat fixed;
-        "
-      >
+      <div class="sect-box">
         @@include('html/components/s-hero.html')
         @@include('html/components/s-team.html')
         @@include('html/components/s-about.html')
@@ -19,7 +19,6 @@
         @@include('html/components/s-contacts.html')
         @@include('html/components/sect-nav.html')
       </div>
-
     </main>
     @@include('html/components/footer.html')
     <script src="js/app.min.js"></script>
