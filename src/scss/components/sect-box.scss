@@ -5,6 +5,12 @@
   position: relative;
   overflow: hidden;
   min-height: 100vh;
+  z-index: 1;
+}
+.sect-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
 }
 
 .sect {

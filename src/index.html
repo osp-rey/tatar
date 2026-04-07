@@ -1,15 +1,16 @@
 <!doctype html>
 <html>
   @@include('html/head.html',{ "title":"pauchoo0k" })
-  <body
-    class="body"
-    style="
-      background: url(&quot;@img/bg.jpg&quot;) center / cover no-repeat fixed;
-    "
-  >
+  <body class="body">
     @@include('html/components/header.html')
     <main>
       <div class="sect-box">
+        <div
+          class="sect-bg"
+          style="
+            background: url(&quot;@img/bg.jpg&quot;) center / cover no-repeat;
+          "
+        ></div>
         @@include('html/components/s-hero.html')
         @@include('html/components/s-team.html')
         @@include('html/components/s-about.html')
