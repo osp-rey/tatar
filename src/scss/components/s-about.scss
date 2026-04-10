@@ -28,6 +28,19 @@
   &__content {
     line-height: 120%;
     text-transform: uppercase;
+    @include tablet {
+      position: relative;
+      max-width: 335px;
+      padding: 15px;
+      
+      &::before {
+        position: absolute;
+        content: "";
+        inset: 0;
+        background-color: var(--dark-blue);
+        z-index: -1;
+      }
+    }
 
     & > * {
       margin: 0;
@@ -54,6 +67,10 @@
     @include tablet {
       right: 50px;
       width: 150px;
+    }
+    @include tablet-min {
+      right: 0;
+      transform: translateX(50%);
     }
   }
 }

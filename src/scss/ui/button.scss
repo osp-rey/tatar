@@ -8,6 +8,7 @@
   --background-h: rgba(227, 62, 209, 0.7);
   --color-h: white;
 
+  @include flex-center;
   cursor: pointer;
   background-color: var(--background);
   border: none;

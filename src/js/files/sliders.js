@@ -4,8 +4,8 @@ export default function sliders() {
   if (teamSlider) {
     const swiper = new Swiper(teamSlider, {
       speed: 900,
-      spaceBetween: 20,
-      slidesPerView: "auto",
+      spaceBetween: 15,
+      slidesPerView: 1,
       scrollbar: {
         el: ".s-team .slider-scrollbar",
         draggable: true,
@@ -21,6 +21,10 @@ export default function sliders() {
         768: {
           spaceBetween: 20,
           slidesPerView: 3,
+        },
+        420: {
+          spaceBetween: 15,
+          slidesPerView: 2,
         },
       },
     });
@@ -48,7 +52,7 @@ export default function sliders() {
   const gallerySliders = document.querySelectorAll(".s-gallery__slider");
 
   if (gallerySliders.length) {
-    gallerySliders.forEach(slider => {
+    gallerySliders.forEach((slider) => {
       const swiper = new Swiper(slider, {
         speed: 900,
         slidesPerView: 1,
@@ -58,7 +62,7 @@ export default function sliders() {
         },
         navigation: {
           prevEl: slider.querySelector(".slider-arrow._prev"),
-          nextEl: slider.querySelector(".slider-arrow._next")
+          nextEl: slider.querySelector(".slider-arrow._next"),
         },
         breakpoints: {
           768: {
@@ -71,6 +75,6 @@ export default function sliders() {
           },
         },
       });
-    })
+    });
   }
 }

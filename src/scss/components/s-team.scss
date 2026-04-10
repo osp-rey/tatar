@@ -14,9 +14,6 @@
 
     .swiper-slide {
       box-sizing: border-box;
-      @include tablet {
-        width: 225px !important;
-      }
     }
   }
 }

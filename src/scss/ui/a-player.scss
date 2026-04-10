@@ -8,6 +8,10 @@
   font-family: "DINPro", sans-serif;
   font-weight: 700;
 
+  @include tablet-min {
+    flex-direction: row-reverse;
+  }
+
   &._playing {
     .a-player-btn {
       background-image: url("@img/pause-icon.svg");
@@ -27,9 +31,21 @@
   @include hover {
     background-color: rgba(255, 255, 255, 0.4);
   }
+  @include tablet-min {
+    width: 40px;
+    height: 40px;
+    background-size: 12px 12px;
+  }
 }
 .a-player-body {
   width: 200px;
+
+  @include tablet-min {
+    font-size: 12px;
+    width: auto;
+    text-transform: none;
+    font-weight: 400;
+  }
 }
 .a-player-name {
   margin-bottom: 10px;
@@ -37,6 +53,10 @@
   text-transform: uppercase;
   @include tablet {
     font-size: 18px;
+  }
+  @include tablet-min {
+    margin-bottom: 0;
+    font-size: 14px;
   }
 }
 .a-player-progressbar {
@@ -46,6 +66,10 @@
   border-radius: 6px;
   overflow: hidden;
   background-color: white;
+
+  @include tablet-min {
+    display: none;
+  }
 
   &::before {
     position: absolute;
@@ -74,6 +98,9 @@
   font-size: 16px;
   @include tablet {
     font-size: 14px;
+  }
+  @include tablet-min {
+    display: none;
   }
 }
 .a-player-time-current {
