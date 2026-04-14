@@ -4,6 +4,7 @@ import burger from "./files/burger.js";
 import headerScroll from "./files/headerScroll.js";
 import localNav from "./files/localNav.js";
 import mediaAdaptive from "./files/mediaAdaptive.js";
+import more from "./files/more.js";
 import sectNav from "./files/sectNav.js";
 import { sectScroll } from "./files/sectScroll.js";
 import sliders from "./files/sliders.js";
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   sortTours();
   localNav();
   mediaAdaptive();
+  more()
 
   Fancybox.bind("[data-fancybox]");
 });

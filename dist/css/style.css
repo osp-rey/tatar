@@ -1036,6 +1036,12 @@ img {
   font-size: 18px;
   z-index: 1
 }
+.s-gallery__tab-btn:nth-child(-n+3) {
+  display: flex!important;
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0)
+}
 .s-gallery__tab-btn._active::before {
   opacity: 1
 }
@@ -1348,7 +1354,8 @@ img {
   .s-about__content {
     position: relative;
     max-width: 335px;
-    padding: 15px
+    padding: 15px;
+    text-transform: none
   }
   .s-about__content::before {
     position: absolute;
